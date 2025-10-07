@@ -4,9 +4,12 @@ environments:
     production:
         memory: 1024
         cli-memory: 512
+        database: laranext
         runtime: 'php-8.4:al2'
         build:
             - 'composer install --no-dev --optimize-autoloader'
             - 'php artisan event:cache'
             - 'php artisan route:cache'
           # - 'npm ci && npm run build && rm -rf node_modules'
+        deploy:
+            - php artisan migrate --force
