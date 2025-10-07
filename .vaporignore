@@ -1,0 +1,23 @@
+# never upload local deps or VCS
+/node_modules/
+/vendor/
+/.vapor/
+/.git/
+/.github/
+/.idea/
+/.vscode/
+
+# tests & caches
+/tests/
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/testing/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+
+# large local-only stuff (if you have them)
+public/storage/
+storage/app/*
