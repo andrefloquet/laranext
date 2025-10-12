@@ -77,6 +77,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return response()->json(['success' => 'Post successfully deleted', 'post' => $post], 204);
     }
 }
